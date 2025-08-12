@@ -1,0 +1,28 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: ecommerce
+
+  # MySQL Database
+  datasource:
+    url: jdbc:mysql://localhost:3306/techmart
+    username: root
+    password: root123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  # JPA/Hibernate
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+    show-sql: true
+
+# Logging
+logging:
+  level:
+    com.monolithic.ecommerce: DEBUG
